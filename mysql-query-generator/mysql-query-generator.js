@@ -57,6 +57,7 @@ class Query {
     */
     constructor(input) {
         this.input = input;
+        this.input.queryType[0] = this.input.queryType[0].toUpperCase();
         if (this.input)
             switch (this.input.queryType[0]) {
                 case "SELECT":
