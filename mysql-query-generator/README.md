@@ -46,6 +46,8 @@ let query = new Query({
         values: ["2"]
     }
 });
+
+console.log(query.getSQLQuery());
 ```
 
 Generates **SELECT (firstColumn) FROM test WHERE firstColumn = ? ORDER BY firstColumn DESC, secondColumn ASC, thirdColumn** and **[ '2' ]**
@@ -59,6 +61,8 @@ query = new Query({
         values: ["1", "2"]
     }
 });
+
+console.log(query.getSQLQuery());
 ```
 
 Generates **INSERT INTO test(firstColumn) VALUES ?** and **[ [ [ '1', '2' ] ] ]**
